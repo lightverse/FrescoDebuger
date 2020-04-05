@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.lightverse.fresco.learner">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application>
         <activity android:name=".LearnerActivity"
             android:label="Leaner">
