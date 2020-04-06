@@ -14,10 +14,18 @@
         android:layout_height="wrap_content"/>
 
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <com.github.lightverse.fresco.learner.TimedSimpleDraweeView
         android:id="@+id/picture"
         android:layout_below="@id/load_pic_btn"
         app:actualImageScaleType="fitCenter"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/picture2"
+        android:layout_below="@id/picture"
+        app:actualImageScaleType="fitCenter"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
 </RelativeLayout>
