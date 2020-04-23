@@ -15,6 +15,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 public class TimedSimpleDraweeView extends SimpleDraweeView {
 
+    public String url;
+
     public static final String TAG = TimedSimpleDraweeView.class.getSimpleName();
     public TimedSimpleDraweeView(Context context, GenericDraweeHierarchy hierarchy) {
         super(context, hierarchy);
@@ -60,5 +62,15 @@ public class TimedSimpleDraweeView extends SimpleDraweeView {
             }
         });
         setController(controllerBuilder.build());
+    }
+
+
+    public void delayLoadUrl(String url){
+        this.url = url;
+    }
+
+
+    public void load(){
+        setImageURI(url);
     }
 }

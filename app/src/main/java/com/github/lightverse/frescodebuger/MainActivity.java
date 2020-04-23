@@ -1,12 +1,16 @@
 package com.github.lightverse.frescodebuger;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.savedstate.SavedStateRegistry;
+import androidx.savedstate.SavedStateRegistryOwner;
 
 import android.app.Instrumentation;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -57,9 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 StartActivityUtils.startByName(MainActivity.this,listData.get(position).get(DATA_KEY_NAME));
             }
         });
+
     }
-
-
 
     private String getTitle(ActivityInfo activityInfo){
         if(activityInfo.labelRes != 0){
