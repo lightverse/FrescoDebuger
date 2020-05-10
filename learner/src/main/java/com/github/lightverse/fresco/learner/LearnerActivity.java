@@ -43,13 +43,14 @@ public class LearnerActivity extends AppCompatActivity {
         LoggingListener loggingListener = new LoggingListener();
         Set<RequestListener2> requestListener2s = new HashSet<>();
         requestListener2s.add(loggingListener);
-        ImagePipelineConfig imagePipelineConfig = ImagePipelineConfig.newBuilder(this)
-                .setDiskCacheEnabled(false)
-                .setBitmapMemoryCacheParamsSupplier(new EmptyMemoryCacheParamsSupplier())
-                .setEncodedMemoryCacheParamsSupplier(new EmptyMemoryCacheParamsSupplier())
-                .setRequestListener2s(requestListener2s)
-                .build();
-        Fresco.initialize(this,imagePipelineConfig,null);
+//        ImagePipelineConfig imagePipelineConfig = ImagePipelineConfig.newBuilder(this)
+//                .setDiskCacheEnabled(false)
+//                .setBitmapMemoryCacheParamsSupplier(new EmptyMemoryCacheParamsSupplier())
+//                .setEncodedMemoryCacheParamsSupplier(new EmptyMemoryCacheParamsSupplier())
+//                .setRequestListener2s(requestListener2s)
+//                .build();
+//        Fresco.initialize(this,imagePipelineConfig,null);
+        Fresco.initialize(this);
 
         FrescoSystrace.provide(new FrescoSystrace.Systrace() {
             @Override
